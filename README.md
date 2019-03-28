@@ -1,29 +1,11 @@
 
-# React Native Android Scanner
-
-react native implementaion of [AndroidScannerDemo](https://github.com/jhansireddy/AndroidScannerDemo) 
-
-## Screenshots
-
-<div align="center">
-
-<img width="23%" src="https://github.com/aseemnishad/react-native-android-scanner/blob/master/screenshots/1.png" alt="Scan Input" title="Scan"></img>
-
-<img width="23%" src="https://github.com/aseemnishad/react-native-android-scanner/blob/master/screenshots/2.png" alt="Scan Points" title="Scan Points"></img>
-
-<img width="23%" src="https://github.com/aseemnishad/react-native-android-scanner/blob/master/screenshots/3.png" alt="After Scan" title="After Scan"></img>
-
-<img width="23%" src="https://github.com/aseemnishad/react-native-android-scanner/blob/master/screenshots/4.png" alt="Scanned Result" title="Scanned Result"></img>
-
-</div>
-
 ## Getting started
 
 
 
 ### Installation
 
-`$ npm install git+https://git@github.com/aseemnishad/react-native-android-scanner.git  --save`
+`$ npm install git+https://git@github.com/pdlanl/rn-scanner.git  --save`
 
 * In `android/setting.gradle`
 
@@ -51,12 +33,12 @@ dependencies {
 ```
 
 * Add the required permissions in `AndroidManifest.xml`:
-    
+
     ```xml
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     ...
-   
+
    <application
       android:allowBackup="true"
     ```
@@ -97,12 +79,12 @@ export default class App extends Component {
   }
 
   onScan = (preference = 2) => {
-    
+
     // PICKFILE_REQUEST_CODE = 1
     // START_CAMERA_REQUEST_CODE = 2
     // OPEN_CAMERA = 4;
     // OPEN_MEDIA = 5;
-    
+
     RNAndroidScanner.startScan(preference);
   }
 
@@ -173,4 +155,4 @@ const styles = StyleSheet.create({
 
 ## Credits
 This repo is a React Native implementation of the following native library : [AndroidScannerDemo](https://github.com/jhansireddy/AndroidScannerDemo)
-  
+
